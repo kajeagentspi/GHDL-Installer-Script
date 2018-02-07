@@ -1,4 +1,7 @@
 # GHDL-Installer-Script
+
+This script also installs gtkwave
+
 ## Instructions:
 
 Download the script
