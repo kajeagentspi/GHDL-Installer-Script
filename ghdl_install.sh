@@ -53,8 +53,7 @@ cd gcc-objs/
 ../configure --prefix=/opt/ghdl-updates --enable-languages=c,vhdl --disable-bootstrap --with-gmp=/usr/local --disable-lto --disable-multilib
 PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9:$PATH make
 PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9:$PATH make install MAKEINFO=true
-PATH=$PATH:/opt/ghdl-updates/bin
-PATH=/opt/ghdl-updates/bin:$PATH
 
-# Cleanup
+
+-s /opt/ghdl-updates/bin/ghdl /bin/ghdl
 rm -rf ghdl-updates
