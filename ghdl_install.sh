@@ -55,5 +55,5 @@ PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9:$PATH make
 PATH=/usr/lib/gcc/x86_64-linux-gnu/4.9:$PATH make install MAKEINFO=true
 
 
--s /opt/ghdl-updates/bin/ghdl /bin/ghdl
+ln -s /opt/ghdl-updates/bin/ghdl /bin/ghdl
 rm -rf ghdl-updates
