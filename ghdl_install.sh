@@ -5,11 +5,12 @@
 # chmod a+x ghdl_install.sh
 # then run with sudo
 # sudo bash ghdl_install.sh
+sudo apt install libmpfr-dev zlib1g-dev -y
+
 set -e
 git clone git://git.code.sf.net/p/ghdl-updates/ghdl-updates.git
 cd ghdl-updates
-git branch
-git checkout ghdl-0.33
+git checkout ghdl-0d.33
 apt install gnat gtkwave m4 -y
 wget ftp://ftp.gnu.org/gnu/gcc/gcc-4.9.4/gcc-4.9.4.tar.bz2
 tar xvjf gcc-4.9.4.tar.bz2
@@ -37,10 +38,10 @@ make install
 cd ../..
 
 # install mpc
-wget ftp://gcc.gnu.org/pub/gcc/infrastructure/mpc-0.8.1.tar.gz
-tar xvzf mpc-0.8.1.tar.gz
-mkdir mpc-0.8.1/mpc-objs/
-cd mpc-0.8.1/mpc-objs/
+wget ftp://gcc.gnu.org/pub/gcc/infrastructure/mpc-0.8.2.tar.gz
+tar xvzf mpc-0.8.2.tar.gz
+mkdir mpc-0.8.2/mpc-objs/
+cd mpc-0.8.2/mpc-objs/
 ../configure --prefix=/usr/local --disable-shared --with-gmp=/usr/local
 make
 make install
